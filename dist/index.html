@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="/index.044e704e.css">
+    <script src="/index.18dbc454.js" defer=""></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand">Pokedex</a>
+          <form class="d-flex" role="search" id="searchForm">
+            <input id="searchInput" class="form-control me-2" type="search" placeholder="Search for Pokemon" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <div class="container py-4 px-3 mx-auto">
+      <h3>
+        Discover the world of Pokémon with our interactive Pokedex app, where
+        you can explore detailed information about all your favorite Pokémon
+      </h3>
+
+      <div id="pokemon_container" class="row row-cols-1 row-cols-md-4 g-4 mt-3"></div>
+
+      <button id="view_more" class="btn btn-primary mx-auto mt-5">
+        Load More Pokemon
+      </button>
+    </div>
+
+    <!-- Modal for displaying Pokémon details -->
+    <div class="modal fade" id="pokemonModal" tabindex="-1" aria-labelledby="pokemonModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pokemonModalLabel">Pokémon Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImg" class="img-fluid" alt="">
+            <h5 id="modalName"></h5>
+            <p id="modalType"></p>
+            <p id="modalAbilities"></p>
+            <p id="modalStats"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
